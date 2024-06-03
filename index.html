@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Web Shop</h1>
+    <div class="header-container">
+      <div class="cart-container">
+        <button class="cart-button">
+          Cart <span class="cart-badge">0</span>
+        </button>
+
+        <h1 id="wallet"></h1>
+
+        <h3 id="message"></h3>
+      </div>
+
+      <button id="add-funds">Add Balance</button>
+    </div>
+    <div class="content">
+      <div class="items-grid"></div>
+
+      <div class="search">
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <button id="search-button">Search</button>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cart</h2>
+        <ul class="cart-items"></ul>
+        <p>Total: <span class="cart-total">$0.00</span></p>
+        <button class="buy-btn">Buy</button>
+      </div>
+    </div>
+
+    <div class="add-modal">
+      <div class="add-modal-content">
+        <span class="add-close">&times;</span>
+        <h2>Add Funds</h2>
+        <input type="text" id="add-bar" placeholder="Add funds..." />
+        <button id="add-button">Add to balance</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

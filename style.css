@@ -1,0 +1,345 @@
+/* CSS variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size-base: 16px;
+  --font-family-base: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-left: 1.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#wallet,
+#message {
+  font-size: 1.7em;
+  margin: 1.1em 0.5em;
+  display: flex;
+
+  padding: 0.5em 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  width: 90%;
+}
+
+/* Header styles */
+.cart-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  margin-left: 2.4em;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#add-funds {
+  padding: 10px 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+
+  width: 7rem;
+  height: 3rem;
+}
+
+#add-funds:hover {
+  background-color: #0056b3;
+}
+
+.cart-badge {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+}
+
+/* Items grid styles */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+  margin: 1em 0 3em 0;
+  width: 70%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1em;
+  max-width: 250px;
+}
+
+.item h2 {
+  margin-top: 0.5em;
+}
+
+.item p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.close {
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.cart-items li span {
+  margin-left: 0.5em;
+}
+
+.cart-total {
+  font-weight: bold;
+}
+
+.buy-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.search {
+  width: 20%;
+  height: 30%;
+  border: 1px solid black;
+  margin: 1em 0 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Basic styling for the search container */
+/* Styling for the search input */
+#search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+/* Styling for the search button */
+#search-button {
+  padding: 10px 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+
+  width: 30%;
+}
+
+/* Hover effect for the search button */
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal container styles */
+.add-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content styles */
+.add-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+}
+
+/* Close button styles */
+.add-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.add-close:hover,
+.add-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-modal.show-modal {
+  display: block;
+  opacity: 1;
+}
+
+.add-modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.add-close {
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#add-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+/* Styling for the search button */
+#add-button {
+  padding: 10px 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+
+  width: 30%;
+}
+
+/* Hover effect for the search button */
+#add-button:hover {
+  background-color: #0056b3;
+}
